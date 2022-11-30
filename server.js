@@ -1,5 +1,5 @@
 require('dotenv').config({path: './config/config.env',});
-const PORTNUM = process.env.PORTNUM  || 5000
+const PORT = process.env.PORTNUM  || 5000
 const mongoose = require("mongoose")
 
 const Db = process.env.DATABASE
@@ -16,6 +16,6 @@ mongoose.connect(Db, {
 
 const app = require("./app")
 
-app.listen(PORTNUM, ()=>{
+app.listen(PORT, ()=>{
     console.log(`App is Listening to ${PORTNUM}`)
 })
