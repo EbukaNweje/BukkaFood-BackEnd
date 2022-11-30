@@ -1,5 +1,5 @@
 require('dotenv').config({path: './config/config.env',});
-const PORTNUM = process.env.PORTNUM
+const PORTNUM = process.env.PORTNUM  || 5000
 const mongoose = require("mongoose")
 
 const Db = process.env.DATABASE
