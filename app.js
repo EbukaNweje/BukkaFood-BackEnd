@@ -4,9 +4,9 @@ const AuthRoutes = require("./routes/auth")
 const order = require("./routes/Order")
 const cookkieParser = require("cookie-parser")
 const fileUploader = require("express-fileupload")
-
-
 const app = express()
+const cors = require("cors");
+app.use(cors());
 app.use(fileUploader({
     useTempFiles: true
 }))
